@@ -8,9 +8,11 @@
 
 ## About
 
-This repository contains my practical implementation work for the **L&T EduTech Deep Learning task assignment**. The work progresses from neural-network fundamentals to CNNs, transfer learning, object detection and segmentation, sequence modelling, representation learning, generative AI, and model optimization.
+This repository contains my practical implementation work for the **L&T EduTech Deep Learning Task Assignment**.
 
-Each task is organized in a separate folder so that the implementation, notebooks, scripts, and generated results can be reviewed independently.
+The assignment is organized into **8 independent tasks**, progressing from neural-network fundamentals to regularization, CNNs, transfer learning, computer vision, sequence modelling, representation learning, generative AI, and model optimization.
+
+Each task has its own folder so the implementation can be opened and reviewed separately.
 
 > **Academic Work:** This repository is maintained for learning, experimentation, evaluation, and academic demonstration.
 
@@ -18,67 +20,75 @@ Each task is organized in a separate folder so that the implementation, notebook
 
 ## Task Overview
 
-| Task | Topic | Major Concepts | Framework |
+| Task | Topic | Main Work | Current Implementation |
 |---|---|---|---|
-| **Task 1** | Neural Network Fundamentals & Experiments | Dense networks, activations, optimizers, batch-size experiments, hyperparameter tuning, error analysis | Python / NumPy |
-| **Task 2** | Regularization & Bias–Variance Analysis | L1/L2, Dropout, Batch Normalization, model comparison | TensorFlow / Keras |
-| **Task 3** | CNN Classification & Data Augmentation | CNN, CIFAR-10, augmentation, baseline vs augmented model | TensorFlow / Keras |
-| **Task 4** | Advanced CNN & Transfer Learning | AlexNet-style CNN, transfer learning, evaluation and comparison | TensorFlow / Keras |
-| **Task 5** | Object Detection & Segmentation | YOLO, Faster R-CNN, U-Net, mAP, IoU, Dice Score | PyTorch / TensorFlow |
-| **Task 6** | Sequence Modeling | RNN, LSTM, sentiment classification, time-series prediction | TensorFlow / Keras |
-| **Task 7** | Representation Learning | Autoencoder, VAE, reconstruction, latent-space interpolation | PyTorch |
-| **Task 8** | Generative AI & Optimization | DCGAN, pruning, INT8 quantization, knowledge distillation | PyTorch |
+| **Task 1** | Neural Network Fundamentals | Activations, optimizers, batch-size experiments, hyperparameter tuning, error analysis | Python scripts + results |
+| **Task 2** | Regularization & Bias–Variance | L1/L2 regularization, Dropout, Batch Normalization, model analysis | Jupyter Notebook |
+| **Task 3** | CNN Classification & Data Augmentation | CIFAR-10 CNN, augmentation, evaluation and comparison | Jupyter Notebook |
+| **Task 4** | AlexNet & Transfer Learning | AlexNet-style CNN, VGG16 transfer learning, evaluation and comparison | 3 Jupyter Notebooks |
+| **Task 5** | Object Detection & Segmentation | Object detection and image segmentation workflows | Jupyter Notebook |
+| **Task 6** | Sequence Modelling | RNN, LSTM, sentiment classification and time-series modelling | Jupyter Notebook |
+| **Task 7** | Representation Learning | Autoencoder, VAE, reconstruction and latent-space analysis | Jupyter Notebook |
+| **Task 8** | Generative AI & Model Optimization | DCGAN, pruning, INT8 quantization and knowledge distillation | Jupyter Notebook |
 
 ---
 
-# Detailed Task Documentation
+# Task Details
 
-## Task 1 — Neural Network Fundamentals & Experimental Analysis
+## Task 1 — Neural Network Fundamentals
 
-**Folder:** L&T TASK 1/
+**Folder:** `L&T TASK 1/`
 
-The first task focuses on implementing and analysing fundamental neural-network components.
+Task 1 implements and analyses the basic components of a neural network.
 
-### Work covered
+### Implemented work
 
-- Dense neural-network architecture
-- ReLU and Softmax activation functions
-- Forward and backward propagation
-- Cross-entropy loss
-- SGD, Momentum, RMSProp and Adam
-- Batch-size experiments
+- Dense neural-network training
+- ReLU and Softmax activation comparison
+- Optimizer comparison
+- Batch-size comparison
 - Single vs multi-configuration experiments
 - Hyperparameter tuning
 - Training-curve analysis
 - Confusion matrix
 - Misclassified-image analysis
 
-### Implementation
+### Main code files
 
-The task contains custom neural-network components in the **nn/** folder and supporting scripts including:
+- `train.py`
+- `compare_activations.py`
+- `compare_batch_sizes.py`
+- `compare_optimizers.py`
+- `single_vs_multi.py`
+- `tune_hyperparameters.py`
+- `visualize_errors.py`
+- `nn/` — neural-network implementation files
 
-- train.py
-- compare_activations.py
-- compare_batch_sizes.py
-- compare_optimizers.py
-- tune_hyperparameters.py
-- visualize_errors.py
+### Results
 
-### Generated results
+The folder contains generated visualizations and experiment results, including:
 
-The folder includes activation, optimizer and batch-mode comparisons, training curves, confusion matrix, misclassified images, and hyperparameter results.
+- Activation comparison
+- Optimizer comparison
+- Batch-mode comparison
+- Training curves
+- Confusion matrix
+- Misclassified images
+- Hyperparameter results
 
 ---
 
 ## Task 2 — Regularization and Bias–Variance Analysis
 
-**Folder:** L&T TASK 2/
+**Folder:** `L&T TASK 2/`
 
-Task 2 studies methods used to reduce overfitting and improve generalization.
+**Notebook:** `L&T_TASK_2.ipynb`
 
-### Work covered
+Task 2 studies techniques used to control overfitting and improve model generalization.
 
-- CNN model construction
+### Implemented work
+
+- Neural/CNN model experiments
 - L1 regularization
 - L2 regularization
 - Dropout
@@ -87,25 +97,19 @@ Task 2 studies methods used to reduce overfitting and improve generalization.
 - Bias–variance analysis
 - Model-performance comparison
 
-### Reference datasets
-
-The notebook supports:
-
-- MNIST
-- Fashion-MNIST
-- CIFAR-10
-
-The dataset is selected according to the experiment and task objective.
+The notebook is configured for GPU execution and uses TensorFlow/Keras with NumPy and Matplotlib.
 
 ---
 
 ## Task 3 — CNN Image Classification and Data Augmentation
 
-**Folder:** L&T TASK 3/
+**Folder:** `L&T TASK 3/`
 
-Task 3 implements CNN-based image classification using **CIFAR-10**.
+**Notebook:** `L&T_TASK3.ipynb`
 
-### Work covered
+Task 3 focuses on image classification using a Convolutional Neural Network.
+
+### Implemented work
 
 - CIFAR-10 preprocessing
 - Baseline CNN
@@ -115,88 +119,80 @@ Task 3 implements CNN-based image classification using **CIFAR-10**.
 - Data augmentation
 - Augmented CNN
 - Training-history analysis
-- Classification metrics
-- Confusion matrix
-- Baseline vs augmented model comparison
-
-**Notebook:** L&T_TASK3.ipynb
+- Classification evaluation
+- Confusion-matrix analysis
+- Baseline vs augmented-model comparison
 
 ### Objective
 
-To demonstrate how CNNs learn visual features and how data augmentation can improve robustness and generalization.
+To understand CNN-based image classification and demonstrate how data augmentation can improve model robustness and generalization.
 
 ---
 
-## Task 4 — Advanced CNN, AlexNet and Transfer Learning
+## Task 4 — AlexNet and Transfer Learning
 
-**Folder:** L&T TASK 4/
+**Folder:** `L&T TASK 4/`
 
-Task 4 focuses on advanced image-classification approaches and transfer learning.
+Task 4 contains three notebooks covering advanced CNN classification and transfer learning.
 
-### Included notebooks
+### Notebooks
 
-- 01_CIFAR_10_Class_Classifier_with_AlexNet_architecture.ipynb
-- Transfer_learning_cat_vs_dog.ipynb
-- L&T_Task_4_Evaluation_and_Comparison.ipynb
+1. `01_CIFAR_10_Class_Classifier_with_AlexNet_architecture.ipynb`
+2. `Task_4_VGG16_Transfer_Learning_CIFAR10.ipynb`
+3. `L&T_Task_4_Evaluation_and_Comparison.ipynb`
 
-### Work covered
+### Implemented work
 
 - AlexNet-style CNN architecture
 - CIFAR-10 classification
-- Transfer learning
-- Cat-vs-dog classification
-- Test accuracy and loss
-- Precision, recall and F1-score
+- VGG16 transfer learning
+- Transfer-learning workflow
+- Model evaluation
+- Accuracy and loss analysis
+- Precision, recall and F1-score analysis
 - Confusion matrix
-- Comparative model analysis
+- Model comparison
 
-The dedicated evaluation notebook provides a structured evaluation and comparison of the trained models.
+> The README lists only files that are currently present in the repository.
 
 ---
 
 ## Task 5 — Object Detection and Image Segmentation
 
-**Folder:** L&T TASK 5/
+**Folder:** `L&T TASK 5/`
 
-Task 5 extends computer vision from image classification to object localization and pixel-level segmentation.
+**Notebook:** `Task_5_Object_Detection_and_Image_Segmentation.ipynb`
 
-### Practical components
+Task 5 extends computer vision from image classification to object localization and image segmentation.
 
-**YOLO Object Detection**
-- Construction/PPE object detection
-- Prediction visualization
-- mAP@50
-- mAP@50:95
+### Implemented work
 
-**Faster R-CNN**
-- Road-sign object detection workflow
-- Detection evaluation
+- Object detection workflow
+- Image segmentation workflow
+- Detection/segmentation prediction visualization
+- Model evaluation
+- Computer-vision performance analysis
 
-**U-Net**
-- Semantic segmentation
-- Oxford-IIIT Pet dataset
-- Pixel-level prediction
-
-### Evaluation metrics
+### Evaluation concepts
 
 - mAP
 - IoU
 - Dice Score
-- Prediction visualizations
+- Prediction visualization
 
-**Notebook:** L&T_TASK_5 (1).ipynb
-
-> GPU execution is recommended for the computationally intensive detection and segmentation experiments.
+> GPU execution is recommended for computationally intensive experiments.
 
 ---
 
-## Task 6 — Sequence Modeling using RNN and LSTM
+## Task 6 — Sequence Modelling with RNN and LSTM
 
-**Folder:** L&T TASK 6/
+**Folder:** `L&T TASK 6/`
+
+**Notebook:** `L&T_TASK_6.ipynb`
 
 Task 6 introduces recurrent neural networks for sequential and time-series data.
 
-### Work covered
+### Implemented work
 
 - Sequence preprocessing
 - Embedding
@@ -204,99 +200,99 @@ Task 6 introduces recurrent neural networks for sequential and time-series data.
 - LSTM
 - Dropout
 - Early stopping
-- Classification evaluation
+- Sentiment-classification workflow
 - Time-series modelling
 - RNN vs LSTM comparison
+- Model evaluation
 
-### Reference datasets
+### Main applications
 
-- **IMDB Movie Reviews** — sentiment classification
-- **Airline Passenger Dataset** — time-series prediction
-
-**Notebook:** L&T_TASK_6.ipynb
-
-### Objective
-
-To understand how recurrent architectures process sequential information and why LSTM networks are effective for longer-term dependencies.
+- IMDB movie-review sentiment classification
+- Airline passenger time-series prediction
 
 ---
 
-## Task 7 — Autoencoders and Variational Autoencoders
+## Task 7 — Autoencoder and Variational Autoencoder
 
-**Folder:** L&T TASK 7/
+**Folder:** `L&T TASK 7/`
+
+**Notebook:** `L&T_TASK_7.ipynb`
 
 Task 7 focuses on unsupervised representation learning.
+
+### Implemented work
+
+- Encoder and decoder architecture
+- Latent representation learning
+- Image reconstruction
+- Autoencoder (AE)
+- Variational Autoencoder (VAE)
+- Reconstruction analysis
+- Latent-space analysis
+- AE vs VAE comparison
+- Latent-space interpolation
 
 ### Dataset
 
 **Fashion-MNIST**
 
-### Work covered
-
-- Encoder and decoder architecture
-- Latent representation
-- Image reconstruction
-- Autoencoder (AE)
-- Variational Autoencoder (VAE)
-- Latent-space analysis
-- AE vs VAE comparison
-- Latent-space interpolation
-- Reconstruction-quality analysis
-
-**Notebook:** L&T_TASK_7.ipynb
-
 ### Objective
 
-To demonstrate how neural networks can learn compact representations and how VAEs create structured latent spaces for generative applications.
+To understand how neural networks learn compact representations and how VAEs provide structured latent spaces for generative applications.
 
 ---
 
-## Task 8 — Generative AI and Deep Learning Model Optimization
+## Task 8 — Generative AI and Model Optimization
 
-**Folder:** L&T TASK 8/
+**Folder:** `L&T TASK 8/`
 
-Task 8 combines generative modelling with practical model-optimization techniques.
+**Current notebook:** `L&t_Task_8.ipynb`
+
+Task 8 combines generative modelling with practical deep-learning optimization techniques.
 
 ### Part A — DCGAN
 
-A **Deep Convolutional Generative Adversarial Network** is implemented on MNIST.
+The notebook implements a **Deep Convolutional Generative Adversarial Network (DCGAN)**.
 
-Components include:
+Main components:
 
 - Generator
 - Discriminator
-- Adversarial training loop
+- Adversarial training
 - Generator/discriminator loss tracking
 - Generated-image visualization
-- Generator weight saving
+- Generator/model saving
 
 ### Part B — Model Optimization
 
 The notebook covers:
 
-**Pruning** — reducing unnecessary model parameters.
+#### Pruning
+Removes less-important parameters to reduce model complexity.
 
-**Dynamic INT8 Quantization** — reducing numerical precision to improve efficiency.
+#### INT8 Quantization
+Uses lower numerical precision to reduce model size and improve inference efficiency.
 
-**Knowledge Distillation** — transferring knowledge from a larger teacher model to a smaller student model.
+#### Knowledge Distillation
+Transfers knowledge from a larger teacher model to a smaller student model.
 
 ### Comparison
 
-The optimization methods are compared using measures such as:
+The optimization experiments analyse:
 
 - Parameter count
 - Model size
 - Accuracy
-- Efficiency
 - Compression impact
+- Efficiency
 
-**Notebook:** L&t_Task_8.ipynb
+> **File status:** The current repository contains `L&t_Task_8.ipynb`. The README intentionally uses the exact filename currently present in GitHub.
 
 ---
 
 # Repository Structure
 
-~~~text
+```text
 L_T_-Task-_Assignment/
 │
 ├── L&T TASK 1/
@@ -305,9 +301,10 @@ L_T_-Task-_Assignment/
 │   ├── compare_activations.py
 │   ├── compare_batch_sizes.py
 │   ├── compare_optimizers.py
+│   ├── single_vs_multi.py
 │   ├── tune_hyperparameters.py
 │   ├── visualize_errors.py
-│   └── generated results
+│   └── generated results and visualizations
 │
 ├── L&T TASK 2/
 │   └── L&T_TASK_2.ipynb
@@ -317,11 +314,11 @@ L_T_-Task-_Assignment/
 │
 ├── L&T TASK 4/
 │   ├── 01_CIFAR_10_Class_Classifier_with_AlexNet_architecture.ipynb
-│   ├── Transfer_learning_cat_vs_dog.ipynb
+│   ├── Task_4_VGG16_Transfer_Learning_CIFAR10.ipynb
 │   └── L&T_Task_4_Evaluation_and_Comparison.ipynb
 │
 ├── L&T TASK 5/
-│   └── L&T_TASK_5 (1).ipynb
+│   └── Task_5_Object_Detection_and_Image_Segmentation.ipynb
 │
 ├── L&T TASK 6/
 │   └── L&T_TASK_6.ipynb
@@ -331,64 +328,96 @@ L_T_-Task-_Assignment/
 │
 └── L&T TASK 8/
     └── L&t_Task_8.ipynb
-~~~
+```
 
 ---
 
 # Technology Stack
 
-### Programming
-- Python
+### Programming and Development
+
+- Python 3.x
 - Jupyter Notebook
 - Google Colab
 
 ### Deep Learning
+
 - TensorFlow
 - Keras
 - PyTorch
 - Torchvision
-- Ultralytics YOLO
 
 ### Data Science and Visualization
+
 - NumPy
 - Pandas
-- Scikit-learn
 - Matplotlib
 - Seaborn
+- Scikit-learn
+
+### Computer Vision
+
+- CNN
+- AlexNet
+- VGG16
+- YOLO/object detection workflows
+- U-Net/segmentation workflows
 
 ---
 
-# Datasets
+# Datasets Used Across the Tasks
 
-| Dataset | Main Usage |
+| Dataset | Main Task / Use |
 |---|---|
 | **MNIST** | Neural networks and generative modelling |
-| **Fashion-MNIST** | Regularization and AE/VAE experiments |
-| **CIFAR-10** | CNN and AlexNet classification |
+| **Fashion-MNIST** | Representation learning |
+| **CIFAR-10** | CNN and advanced image classification |
 | **IMDB Movie Reviews** | RNN/LSTM sentiment classification |
-| **Airline Passenger Dataset** | Time-series sequence modelling |
-| **Oxford-IIIT Pet** | Semantic segmentation |
-| **Construction PPE Dataset** | YOLO object detection |
-| **Road-Sign Dataset** | Faster R-CNN object detection |
+| **Airline Passenger Dataset** | Time-series modelling |
+| **Oxford-IIIT Pet** | Image segmentation |
+| **Construction/PPE data** | Object detection experiments |
+| **Road-sign data** | Object detection experiments |
 
-> The L&T task guidelines provide multiple reference datasets for several tasks. This repository uses the dataset or datasets that best match each practical objective; every reference dataset does not need to be used in every task.
+The exact dataset and experiment depend on the notebook and task objective.
 
 ---
 
 # Learning Progression
 
-The eight tasks provide a structured progression:
+The assignment follows this progression:
 
-1. **Neural-network fundamentals**
-2. **Regularization and generalization**
-3. **Convolutional image classification**
-4. **Advanced CNNs and transfer learning**
-5. **Object detection and semantic segmentation**
-6. **Sequential modelling with RNN/LSTM**
-7. **Representation learning with AE/VAE**
-8. **Generative AI and model optimization**
+1. **Neural Network Fundamentals**
+2. **Regularization and Bias–Variance**
+3. **CNN Classification and Data Augmentation**
+4. **AlexNet and Transfer Learning**
+5. **Object Detection and Image Segmentation**
+6. **RNN and LSTM Sequence Modelling**
+7. **Autoencoder and VAE Representation Learning**
+8. **DCGAN and Model Optimization**
 
-This progression covers both **model development** and **model evaluation**, including accuracy, loss, F1-score, confusion matrices, mAP, IoU, Dice Score, reconstruction quality, parameter count, model size, and optimization efficiency.
+This provides a complete progression from basic neural-network concepts to modern deep-learning and generative-AI techniques.
+
+---
+
+# Evaluation
+
+Depending on the task, the repository demonstrates:
+
+- Training and validation loss
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Confusion matrix
+- Misclassified samples
+- mAP
+- IoU
+- Dice Score
+- Reconstruction quality
+- Latent-space analysis
+- Model-size comparison
+- Parameter-count comparison
+- Quantization/compression analysis
 
 ---
 
@@ -396,27 +425,27 @@ This progression covers both **model development** and **model evaluation**, inc
 
 ## Google Colab
 
-1. Open the required notebook.
+1. Open the required notebook from the corresponding task folder.
 2. Open it in Google Colab.
-3. Select a GPU runtime for computationally intensive tasks.
-4. Run the notebook cells sequentially.
-5. Review the generated metrics, visualizations, and model outputs.
+3. Select a GPU runtime when recommended.
+4. Run the cells sequentially.
+5. Review the outputs, metrics, visualizations, and results.
 
 ## Local Jupyter
 
-Install the core dependencies:
+Install the main dependencies:
 
-~~~bash
+```bash
 pip install numpy pandas matplotlib seaborn scikit-learn tensorflow torch torchvision
-~~~
+```
 
-Then launch Jupyter:
+Launch Jupyter:
 
-~~~bash
+```bash
 jupyter notebook
-~~~
+```
 
-Task 5 may require additional packages such as Ultralytics and TorchMetrics. The required installation commands are included in the relevant notebook.
+Additional packages required by a particular task should be installed according to the instructions inside that notebook.
 
 ---
 
@@ -424,36 +453,13 @@ Task 5 may require additional packages such as Ultralytics and TorchMetrics. The
 
 Where applicable, experiments use fixed random seeds to improve reproducibility.
 
-Typical configuration:
+A typical configuration is:
 
-~~~python
+```python
 SEED = 42
-~~~
+```
 
-GPU acceleration is recommended for Tasks 4–8.
-
----
-
-# Evaluation
-
-Depending on the task, the repository includes:
-
-- Training and validation curves
-- Accuracy and loss
-- Precision
-- Recall
-- F1-score
-- Confusion matrix
-- Misclassified samples
-- mAP@50
-- mAP@50:95
-- IoU
-- Dice Score
-- Reconstruction analysis
-- Latent-space analysis
-- Parameter-count comparison
-- Model-size comparison
-- Optimization and compression analysis
+GPU acceleration is recommended for the more computationally intensive computer-vision, sequence, representation-learning, and generative-model experiments.
 
 ---
 
@@ -466,13 +472,15 @@ GitHub: [@Mukeshkarn-DS](https://github.com/Mukeshkarn-DS)
 
 ## Repository
 
-[L&T EduTech – Task Assignment](https://github.com/Mukeshkarn-DS/L_T_-Task-_Assignment)
+[L&T EduTech – Deep Learning Task Assignment](https://github.com/Mukeshkarn-DS/L_T_-Task-_Assignment)
 
 ---
 
 # Academic Note
 
-This repository represents practical implementation and experimentation performed as part of the **L&T EduTech Deep Learning task assignment**. The notebooks are organized to demonstrate concepts, implementation workflows, evaluation methods, and observations for Tasks 1–8.
+This repository represents practical implementation and experimentation performed as part of the **L&T EduTech Deep Learning Task Assignment**.
+
+The repository is organized so that **Tasks 1–8 can be reviewed independently**, with the README reflecting the current implementation files in each task folder.
 
 ---
 
